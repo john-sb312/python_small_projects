@@ -35,12 +35,7 @@ def get_proxies_online():
         "https://www.proxyscan.io/download?type=socks5",
         "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all&ssl=all&anonymity=all"
         ]
-    }
-    '''
-    the funny thing about this list of socks5 proxy urls is none of them are actually socks5
-    they contain a mixture of http and socks4, but never socks5
-    i genuinely don't know why, home router with OpenWRT misconfiguration?
-    '''
+    } # i prefer socks5, but you can add any 
     for proxy_site in proxy_remote['urls']:
         try:
             response = requests.get(proxy_site)
@@ -52,6 +47,8 @@ def get_proxies_online():
 
         except requests.ConnectionError() as m:
             print(f'Error while getting proxies from {proxy_site}: {m}')
+        except Exception as e:
+            print(e)
     return proxies
         
 # self explanatory, get your ISP's assigned IP
@@ -73,16 +70,14 @@ def requests_proxy_test(proxy):
             'https' : f'{protocol}://{ip}:{port}'
         }
         try:
-            response = requests.get(url, proxies=test_proxies, timeout=0.8)
+            response = requests.get(url, proxies=test_proxies, timeout=(1,1))
             ip_return = json.loads(response.text)['ip']
             if (ip_return == None) or (current_ip == ip_return): pass
             # else: print(f'{protocol} {ip} {port}')
             else: protos_proxy.append(protocol)
         except requests.ConnectionError as m:
-            # print(m)
             pass
         except Exception as e:
-            # print(e)
             pass
     if protos_proxy == []: pass 
     else: 
@@ -100,6 +95,6 @@ def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
 if __name__ == "__main__":
     current_ip = get_current_ip()
     proxies = get_proxies_online()
-    runThread(requests_proxy_test, proxies, 100)
+    runThread(requests_proxy_test, proxies, 300)
     
 
