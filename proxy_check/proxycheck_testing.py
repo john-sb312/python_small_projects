@@ -21,19 +21,14 @@ def get_proxy_files():
 # self explanatory, get your ISP's assigned IP
 def get_current_ip():
     response = requests.get('https://ipinfo.io/json')
-    ip_return = json.loads(response.text)['ip']
     try:
+        ip_return = json.loads(response.text)['ip']
         return ip_return
     except Exception as m:
-        print('Connection error?')
+        return None
 
 def requests_proxy_test(proxy):
-    # proxies_list = get_proxy_files()
-    current_ip = get_current_ip()
-    # try:
-    #     proxies_list.extend(get_proxy_files())
-    # except Exception as m:
-    #     print(m)
+    
     url = 'https://ipinfo.io/json'
     ip, port = proxy
     for protocol in ['http', 'https', 'socks4', 'sock5']:
@@ -61,6 +56,7 @@ def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
         print("Proxy Checker initiation failed! Please check you have selected a thread count.")
 
 if __name__ == "__main__":
+    current_ip = get_current_ip()
     proxies = get_proxy_files()
     runThread(requests_proxy_test, proxies, 200)
     
