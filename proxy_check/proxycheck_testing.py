@@ -44,11 +44,11 @@ def get_proxies_online():
     for proxy_site in proxy_remote['urls']:
         try:
             response = requests.get(proxy_site)
-            proxy_remote = (response.text).split()
-            for i in range(len(proxy_remote)):
-                ip, port = proxy_remote[i].split(":")
-                proxy_remote[i] = (ip, int(port))
-            proxies.extend(proxy_remote)
+            proxy_get = (response.text).split()
+            for i in range(len(proxy_get)):
+                ip, port = proxy_get[i].split(":")
+                proxy_get[i] = (ip, int(port))
+            proxies.extend(proxy_get)
 
         except requests.ConnectionError() as m:
             print(f'Error while getting proxies from {proxy_site}: {m}')
@@ -67,7 +67,7 @@ def requests_proxy_test(proxy):
     
     url = 'https://ipinfo.io/json'
     ip, port = proxy
-    for protocol in ['http', 'https', 'socks4', 'sock5']:
+    for protocol in ['http', 'https', 'socks4', 'socks5']:
         test_proxies = {
             'http'  : f'{protocol}://{ip}:{port}',
             'https' : f'{protocol}://{ip}:{port}'
@@ -78,8 +78,10 @@ def requests_proxy_test(proxy):
             if (ip_return == None) or (current_ip == ip_return): pass
             else: print(f'{protocol} {ip} {port}')
         except requests.ConnectionError as m:
+            # print(m)
             pass
         except Exception as e:
+            # print(e)
             pass
 
 def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
