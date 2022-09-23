@@ -1,11 +1,12 @@
-import os, requests, re
+import os, requests, re, json
 from glob import glob
+import concurrent.futures
 
 
 def get_proxy_files():
     proxy_from_file = []
     #path = os.getcwd() + f'/{folder}/'
-    path = os.getcwd() + '/proxy_file/'
+    path = os.getcwd() + '/proxy_check/proxy_file/'
 
     #read all proxy files in folder, turn it into a list of tuples of (ip, port)
     for filename in glob(os.path.join(path, '*txt')):
@@ -35,31 +36,42 @@ def get_current_ip():
     except Exception as m:
         return None
 
-def requests_proxy_test():
-    proxies_list = []
+def requests_proxy_test(proxy):
+    # proxies_list = get_proxy_files()
     current_ip = get_current_ip()
-    try:
-        proxies_list.extend(get_proxy_files())
-    except Exception as m:
-        print(m)
+    # try:
+    #     proxies_list.extend(get_proxy_files())
+    # except Exception as m:
+    #     print(m)
     url1 = 'https://ipinfo.io/json'
-    for proxy in proxies_list:
-        ip, port = proxy
+    ip, port = proxy
+    for protocol in ['http', 'https', 'socks4', 'sock5']:
         test_proxies = {
-            'http'  : f'socks5://{ip}:{port}',
-            'https' : f'socks5://{ip}:{port}'
+            'http'  : f'{protocol}://{ip}:{port}',
+            'https' : f'{protocol}://{ip}:{port}'
         }
         try:
-            response1 = requests.get(url1, proxies=test_proxies, timeout=(0.5, 0.5))
+            response1 = requests.get(url1, proxies=test_proxies, timeout=5)
             ip_return = re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", str(response1.text))
             if ip_return == [] or (current_ip in ip_return): pass
-            else: print(f'socks5 {ip} {port}')
-
+            else: print(f'{protocol} {ip} {port}')
         except requests.ConnectionError as m:
             # print(m)
             pass
         except Exception as e:
             pass
+
+def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
+    try:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=int(workerCountInput)) as executor:
+            #Running ProxyCheck funtion with the unchecked proxies as its argument
+            executor.map(ProxyCheck, uncheckedProxies)
+        
+    except Exception:
+        print("Proxy Checker initiation failed! Please check you have selected a thread count.")
+
 if __name__ == "__main__":
-    requests_proxy_test()
-    # print(get_current_ip())
+    proxies = get_proxy_files()
+    runThread(requests_proxy_test, proxies, 200)
+    
+
