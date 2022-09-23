@@ -64,7 +64,7 @@ def get_current_ip():
         return None
 
 def requests_proxy_test(proxy):
-    
+    protos_proxy = []
     url = 'https://ipinfo.io/json'
     ip, port = proxy
     for protocol in ['http', 'https', 'socks4', 'socks5']:
@@ -76,13 +76,17 @@ def requests_proxy_test(proxy):
             response = requests.get(url, proxies=test_proxies, timeout=0.8)
             ip_return = json.loads(response.text)['ip']
             if (ip_return == None) or (current_ip == ip_return): pass
-            else: print(f'{protocol} {ip} {port}')
+            # else: print(f'{protocol} {ip} {port}')
+            else: protos_proxy.append(protocol)
         except requests.ConnectionError as m:
             # print(m)
             pass
         except Exception as e:
             # print(e)
             pass
+    if protos_proxy == []: pass 
+    else: 
+        print(f'{protos_proxy} {proxy}')
 
 def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
     try:
@@ -96,6 +100,6 @@ def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
 if __name__ == "__main__":
     current_ip = get_current_ip()
     proxies = get_proxies_online()
-    runThread(requests_proxy_test, proxies, 200)
+    runThread(requests_proxy_test, proxies, 100)
     
 
