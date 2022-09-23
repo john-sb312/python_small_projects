@@ -1,4 +1,4 @@
-import os, requests, re, json
+import os, requests, json
 from glob import glob
 import concurrent.futures
 
@@ -17,24 +17,15 @@ def get_proxy_files():
         proxy_from_file.extend(proxy_read)
     return proxy_from_file
 
-# try out a random proxy get library
-def get_proxy_online():
-    proxy_online = []
-    proxies = proxlist.list_proxies()
-    for i in range(len(proxies)):
-        ip, port = proxies[i].split(":")
-        proxies[i] = (ip, int(port))
-    proxy_online.extend(proxies)
-    return proxy_online
 
 # self explanatory, get your ISP's assigned IP
 def get_current_ip():
     response = requests.get('https://ipinfo.io/json')
-    ip_return = re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", str(response.text))
+    ip_return = json.loads(response.text)['ip']
     try:
-        return ip_return[0]
+        return ip_return
     except Exception as m:
-        return None
+        print('Connection error?')
 
 def requests_proxy_test(proxy):
     # proxies_list = get_proxy_files()
@@ -43,7 +34,7 @@ def requests_proxy_test(proxy):
     #     proxies_list.extend(get_proxy_files())
     # except Exception as m:
     #     print(m)
-    url1 = 'https://ipinfo.io/json'
+    url = 'https://ipinfo.io/json'
     ip, port = proxy
     for protocol in ['http', 'https', 'socks4', 'sock5']:
         test_proxies = {
@@ -51,12 +42,11 @@ def requests_proxy_test(proxy):
             'https' : f'{protocol}://{ip}:{port}'
         }
         try:
-            response1 = requests.get(url1, proxies=test_proxies, timeout=5)
-            ip_return = re.findall(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", str(response1.text))
-            if ip_return == [] or (current_ip in ip_return): pass
+            response = requests.get(url, proxies=test_proxies, timeout=0.8)
+            ip_return = json.loads(response.text)['ip']
+            if (ip_return == None) or (current_ip == ip_return): pass
             else: print(f'{protocol} {ip} {port}')
         except requests.ConnectionError as m:
-            # print(m)
             pass
         except Exception as e:
             pass
