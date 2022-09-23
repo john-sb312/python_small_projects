@@ -17,7 +17,43 @@ def get_proxy_files():
         proxy_from_file.extend(proxy_read)
     return proxy_from_file
 
+def get_proxies_online():
+    proxies = []
+    proxy_remote = {
+        "urls" :[
+        "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=all&timeout=500&country=all&ssl=all",
+        "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
+        "https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
+        "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAW.txt",
+        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks5.txt",
+        "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
+        "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+        "https://raw.githubusercontent.com/manuGMG/proxy-365/main/SOCKS5.txt",
+        "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt",
+        "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all",
+        "https://www.proxy-list.download/api/v1/get?type=socks5",
+        "https://www.proxyscan.io/download?type=socks5",
+        "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all&ssl=all&anonymity=all"
+        ]
+    }
+    '''
+    the funny thing about this list of socks5 proxy urls is none of them are actually socks5
+    they contain a mixture of http and socks4, but never socks5
+    i genuinely don't know why, home router with OpenWRT misconfiguration?
+    '''
+    for proxy_site in proxy_remote['urls']:
+        try:
+            response = requests.get(proxy_site)
+            proxy_remote = (response.text).split()
+            for i in range(len(proxy_remote)):
+                ip, port = proxy_remote[i].split(":")
+                proxy_remote[i] = (ip, int(port))
+            proxies.extend(proxy_remote)
 
+        except requests.ConnectionError() as m:
+            print(f'Error while getting proxies from {proxy_site}: {m}')
+    return proxies
+        
 # self explanatory, get your ISP's assigned IP
 def get_current_ip():
     response = requests.get('https://ipinfo.io/json')
@@ -57,7 +93,7 @@ def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
 
 if __name__ == "__main__":
     current_ip = get_current_ip()
-    proxies = get_proxy_files()
+    proxies = get_proxies_online()
     runThread(requests_proxy_test, proxies, 200)
     
 
