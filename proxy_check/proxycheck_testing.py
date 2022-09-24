@@ -2,11 +2,11 @@ import os, requests, json
 from glob import glob
 import concurrent.futures
 
+PATH = os.getcwd() + '/proxy_check/'
 
 def get_proxy_files():
     proxy_from_file = []
-    #path = os.getcwd() + f'/{folder}/'
-    path = os.getcwd() + '/proxy_check/proxy_file/'
+    path = PATH + '/proxy_file/'
 
     #read all proxy files in folder, turn it into a list of tuples of (ip, port)
     for filename in glob(os.path.join(path, '*txt')):
@@ -38,14 +38,14 @@ def get_proxies_online():
     } # i prefer socks5, but you can add any 
     for proxy_site in proxy_remote['urls']:
         try:
-            response = requests.get(proxy_site)
+            response = requests.get(proxy_site, timeout=1)
             proxy_get = (response.text).split()
             for i in range(len(proxy_get)):
                 ip, port = proxy_get[i].split(":")
                 proxy_get[i] = (ip, int(port))
             proxies.extend(proxy_get)
 
-        except requests.ConnectionError() as m:
+        except Exception as m:
             print(f'Error while getting proxies from {proxy_site}: {m}')
         except Exception as e:
             print(e)
@@ -70,10 +70,9 @@ def requests_proxy_test(proxy):
             'https' : f'{protocol}://{ip}:{port}'
         }
         try:
-            response = requests.get(url, proxies=test_proxies, timeout=(1,1))
-            ip_return = json.loads(response.text)['ip']
-            if (ip_return == None) or (current_ip == ip_return): pass
-            # else: print(f'{protocol} {ip} {port}')
+            response = requests.get(url, proxies=test_proxies, timeout=0.8)
+            result_return = json.loads(response.text)
+            if (result_return['ip'] == None) or (current_ip == result_return['ip']): pass
             else: protos_proxy.append(protocol)
         except requests.ConnectionError as m:
             pass
@@ -81,20 +80,35 @@ def requests_proxy_test(proxy):
             pass
     if protos_proxy == []: pass 
     else: 
-        print(f'{protos_proxy} {proxy}')
-
-def runThread(ProxyCheck, uncheckedProxies, workerCountInput):
-    try:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=int(workerCountInput)) as executor:
-            #Running ProxyCheck funtion with the unchecked proxies as its argument
-            executor.map(ProxyCheck, uncheckedProxies)
+        online_proxy = {
+            f'{ip}:{port}': {
+                'protocol'  : protos_proxy,
+                'city'      : result_return['city'],
+                'region'    : result_return['region'],
+                'country'   : result_return['country'],
+                'location'  : result_return['loc']
+                }
+            }
+        try :
+            alive.update(online_proxy)
+        except Exception() as e: print(e)
+        print(online_proxy)
         
-    except Exception:
-        print("Proxy Checker initiation failed! Please check you have selected a thread count.")
+
+
+def run_thread(worker, input, worker_count):
+    try:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=int(worker_count)) as executor:
+            executor.map(worker, input)
+    except Exception as e:
+        print(f'Error, {e}.')
 
 if __name__ == "__main__":
+    alive = {}
     current_ip = get_current_ip()
     proxies = get_proxies_online()
-    runThread(requests_proxy_test, proxies, 300)
+    run_thread(requests_proxy_test, proxies, 100)
     
-
+    dumping = json.dumps(alive, indent=4)
+    with open(PATH + "online_proxies.json", "w") as outfile:
+        outfile.write(dumping)

@@ -1,0 +1,859 @@
+{
+    "51.68.125.26:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "country": "FR",
+        "location": "48.8534,2.3488"
+    },
+    "178.48.68.61:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Budapest",
+        "region": "Budapest",
+        "country": "HU",
+        "location": "47.4984,19.0404"
+    },
+    "78.47.219.204:3128": {
+        "protocol": [
+            "http"
+        ],
+        "city": "F\u00fcrth",
+        "region": "Bavaria",
+        "country": "DE",
+        "location": "49.4759,10.9886"
+    },
+    "185.139.56.133:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Tbilisi",
+        "region": "T'bilisi",
+        "country": "GE",
+        "location": "41.6941,44.8337"
+    },
+    "93.178.201.231:52281": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Chernivtsi",
+        "region": "Chernivtsi Oblast",
+        "country": "UA",
+        "location": "48.2904,25.9324"
+    },
+    "91.193.125.123:3629": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Odesa",
+        "region": "Odessa",
+        "country": "UA",
+        "location": "46.4857,30.7438"
+    },
+    "31.173.185.231:1080": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Balakovo",
+        "region": "Saratovskaya Oblast",
+        "country": "RU",
+        "location": "52.0278,47.8007"
+    },
+    "170.39.116.186:3128": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Washington",
+        "region": "Washington, D.C.",
+        "country": "US",
+        "location": "38.8951,-77.0364"
+    },
+    "203.159.92.199:3080": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Mueang Nonthaburi",
+        "region": "Nonthaburi",
+        "country": "TH",
+        "location": "13.8607,100.5148"
+    },
+    "185.172.129.13:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "location": "40.7143,-74.0060"
+    },
+    "200.16.68.111:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "New York City",
+        "region": "New York",
+        "country": "US",
+        "location": "40.7143,-74.0060"
+    },
+    "138.94.92.26:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "A\u00e7u",
+        "region": "Rio Grande do Norte",
+        "country": "BR",
+        "location": "-5.5767,-36.9086"
+    },
+    "114.115.223.222:8001": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Beijing",
+        "region": "Beijing",
+        "country": "CN",
+        "location": "39.9075,116.3972"
+    },
+    "170.238.79.2:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Itaquaquecetuba",
+        "region": "S\u00e3o Paulo",
+        "country": "BR",
+        "location": "-23.4861,-46.3483"
+    },
+    "51.254.211.171:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "country": "FR",
+        "location": "48.8534,2.3488"
+    },
+    "158.69.197.113:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Montr\u00e9al",
+        "region": "Quebec",
+        "country": "CA",
+        "location": "45.5040,-73.5747"
+    },
+    "60.223.251.93:7302": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Taiyuan",
+        "region": "Shanxi",
+        "country": "CN",
+        "location": "37.8694,112.5603"
+    },
+    "78.31.92.145:1080": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Racib\u00f3rz",
+        "region": "Silesia",
+        "country": "PL",
+        "location": "50.0919,18.2193"
+    },
+    "179.106.168.10:47488": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "S\u00edtio do Mato",
+        "region": "Bahia",
+        "country": "BR",
+        "location": "-13.0847,-43.4653"
+    },
+    "62.82.107.247:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Santa Magdalena de Pulpis",
+        "region": "Valencia",
+        "country": "ES",
+        "location": "40.3563,0.3026"
+    },
+    "178.212.49.96:1080": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "\u015awiebodzin",
+        "region": "Lubusz",
+        "country": "PL",
+        "location": "52.2475,15.5335"
+    },
+    "186.248.87.172:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Brod\u00f3squi",
+        "region": "S\u00e3o Paulo",
+        "country": "BR",
+        "location": "-20.9914,-47.6586"
+    },
+    "204.10.182.34:39593": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Ocala",
+        "region": "Florida",
+        "country": "US",
+        "location": "29.1281,-82.2975"
+    },
+    "202.21.115.202:4153": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Ulan Bator",
+        "region": "Ulaanbaatar",
+        "country": "MN",
+        "location": "47.9077,106.8832"
+    },
+    "37.98.218.137:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "\u0141\u00f3d\u017a",
+        "region": "\u0141\u00f3d\u017a Voivodeship",
+        "country": "PL",
+        "location": "51.7706,19.4739"
+    },
+    "201.76.9.26:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Tubar\u00e3o",
+        "region": "Santa Catarina",
+        "country": "BR",
+        "location": "-28.4667,-49.0069"
+    },
+    "130.185.213.146:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Yambol",
+        "region": "Yambol",
+        "country": "BG",
+        "location": "42.4833,26.5000"
+    },
+    "187.177.30.154:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Mexico City",
+        "region": "Mexico City",
+        "country": "MX",
+        "location": "19.4285,-99.1277"
+    },
+    "138.117.179.54:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Itabuna",
+        "region": "Bahia",
+        "country": "BR",
+        "location": "-14.7856,-39.2803"
+    },
+    "78.109.139.51:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Barnaul",
+        "region": "Altai Krai",
+        "country": "RU",
+        "location": "53.3606,83.7636"
+    },
+    "190.54.12.74:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Lo Prado",
+        "region": "Santiago Metropolitan",
+        "country": "CL",
+        "location": "-33.4228,-70.7450"
+    },
+    "86.28.76.169:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Llantrisant",
+        "region": "Wales",
+        "country": "GB",
+        "location": "51.5403,-3.3739"
+    },
+    "109.122.81.9:57553": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Belgrade",
+        "region": "Central Serbia",
+        "country": "RS",
+        "location": "44.8040,20.4651"
+    },
+    "83.103.195.183:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Constan\u0163a",
+        "region": "Constan\u021ba",
+        "country": "RO",
+        "location": "44.1807,28.6343"
+    },
+    "83.234.76.155:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Moscow",
+        "region": "Moscow",
+        "country": "RU",
+        "location": "55.7522,37.6156"
+    },
+    "62.201.233.59:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "As Sulaym\u0101n\u012byah",
+        "region": "Sulaymaniyah",
+        "country": "IQ",
+        "location": "35.5650,45.4329"
+    },
+    "110.78.182.221:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Mae Lao",
+        "region": "Chiang Rai",
+        "country": "TH",
+        "location": "19.7900,99.6997"
+    },
+    "91.203.114.71:42905": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Ukrainka",
+        "region": "Kiev",
+        "country": "UA",
+        "location": "50.1432,30.7461"
+    },
+    "43.241.30.222:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Mumbai",
+        "region": "Maharashtra",
+        "country": "IN",
+        "location": "19.0728,72.8826"
+    },
+    "14.23.62.59:7300": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "country": "CN",
+        "location": "23.1167,113.2500"
+    },
+    "81.183.253.34:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "\u00c1gfalva",
+        "region": "Gy\u0151r-Moson-Sopron",
+        "country": "HU",
+        "location": "47.6899,16.5166"
+    },
+    "80.52.223.98:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "G\u0142\u00f3wczyce",
+        "region": "Pomerania",
+        "country": "PL",
+        "location": "54.6193,17.3723"
+    },
+    "51.38.177.96:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Rouen",
+        "region": "Normandy",
+        "country": "FR",
+        "location": "49.4431,1.0993"
+    },
+    "1.255.134.136:3128": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Seoul",
+        "region": "Seoul",
+        "country": "KR",
+        "location": "37.5660,126.9784"
+    },
+    "202.58.199.229:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Samarinda",
+        "region": "East Kalimantan",
+        "country": "ID",
+        "location": "-0.4917,117.1458"
+    },
+    "109.75.42.82:3629": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Yerevan",
+        "region": "Yerevan",
+        "country": "AM",
+        "location": "40.1811,44.5136"
+    },
+    "185.99.33.171:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Jounieh",
+        "region": "Mont-Liban",
+        "country": "LB",
+        "location": "33.9808,35.6178"
+    },
+    "47.254.153.200:80": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Frankfurt am Main",
+        "region": "Hesse",
+        "country": "DE",
+        "location": "50.1025,8.6299"
+    },
+    "151.84.98.89:4153": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Naples",
+        "region": "Campania",
+        "country": "IT",
+        "location": "40.8522,14.2681"
+    },
+    "103.94.133.90:4153": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Jakarta",
+        "region": "Jakarta",
+        "country": "ID",
+        "location": "-6.2146,106.8451"
+    },
+    "179.191.125.202:4153": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "S\u00e3o Paulo",
+        "region": "S\u00e3o Paulo",
+        "country": "BR",
+        "location": "-23.5475,-46.6361"
+    },
+    "190.4.205.226:4153": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Santiago",
+        "region": "Santiago Metropolitan",
+        "country": "CL",
+        "location": "-33.4569,-70.6483"
+    },
+    "91.201.240.84:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Kropyvnytskyy",
+        "region": "Kirovohrad Oblast",
+        "country": "UA",
+        "location": "48.5132,32.2597"
+    },
+    "115.85.85.162:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Jakarta",
+        "region": "Jakarta",
+        "country": "ID",
+        "location": "-6.2146,106.8451"
+    },
+    "123.171.14.7:23456": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Sham Shui Po",
+        "region": "Sham Shui Po",
+        "country": "HK",
+        "location": "22.3302,114.1595"
+    },
+    "45.169.70.9:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Bras\u00edlia",
+        "region": "Federal District",
+        "country": "BR",
+        "location": "-15.8041,-48.0628"
+    },
+    "177.92.86.102:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "S\u00e3o Paulo",
+        "region": "S\u00e3o Paulo",
+        "country": "BR",
+        "location": "-23.5475,-46.6361"
+    },
+    "201.206.141.102:6969": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Cartago",
+        "region": "Cartago",
+        "country": "CR",
+        "location": "9.8953,-83.9403"
+    },
+    "190.158.115.126:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Bogot\u00e1",
+        "region": "Bogota D.C.",
+        "country": "CO",
+        "location": "4.6097,-74.0817"
+    },
+    "18.192.45.38:3148": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Frankfurt am Main",
+        "region": "Hesse",
+        "country": "DE",
+        "location": "50.1025,8.6299"
+    },
+    "41.223.234.116:37259": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Ouagadougou",
+        "region": "Centre",
+        "country": "BF",
+        "location": "12.3657,-1.5339"
+    },
+    "103.220.205.162:4673": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Feni",
+        "region": "Chittagong",
+        "country": "BD",
+        "location": "23.0144,91.3966"
+    },
+    "111.50.83.20:7302": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "country": "CN",
+        "location": "23.1167,113.2500"
+    },
+    "188.165.162.255:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "country": "FR",
+        "location": "48.8534,2.3488"
+    },
+    "218.1.200.18:57114": {
+        "protocol": [
+            "http",
+            "socks5"
+        ],
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "country": "CN",
+        "location": "31.2222,121.4581"
+    },
+    "188.241.45.142:2021": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "London",
+        "region": "England",
+        "country": "GB",
+        "location": "51.5085,-0.1257"
+    },
+    "110.77.135.70:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Hua Hin",
+        "region": "Prachuap Khiri Khan",
+        "country": "TH",
+        "location": "12.5707,99.9588"
+    },
+    "45.185.6.35:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Salvador",
+        "region": "Bahia",
+        "country": "BR",
+        "location": "-12.9711,-38.5108"
+    },
+    "187.243.253.182:43015": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Ciudad Obreg\u00f3n",
+        "region": "Sonora",
+        "country": "MX",
+        "location": "27.4864,-109.9408"
+    },
+    "77.89.204.254:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Chisinau",
+        "region": "Chi\u0219in\u0103u Municipality",
+        "country": "MD",
+        "location": "47.0056,28.8575"
+    },
+    "190.196.20.166:44907": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Santiago",
+        "region": "Santiago Metropolitan",
+        "country": "CL",
+        "location": "-33.4569,-70.6483"
+    },
+    "134.122.74.46:45678": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Frankfurt am Main",
+        "region": "Hesse",
+        "country": "DE",
+        "location": "50.1025,8.6299"
+    },
+    "122.224.220.90:7302": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Hangzhou",
+        "region": "Zhejiang",
+        "country": "CN",
+        "location": "30.2936,120.1614"
+    },
+    "186.1.206.154:1080": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Port-au-Prince",
+        "region": "Ouest",
+        "country": "HT",
+        "location": "18.5435,-72.3388"
+    },
+    "51.159.162.151:80": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "country": "FR",
+        "location": "48.8534,2.3488"
+    },
+    "190.109.2.87:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Bogot\u00e1",
+        "region": "Bogota D.C.",
+        "country": "CO",
+        "location": "4.6097,-74.0817"
+    },
+    "114.5.129.22:5678": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Jakarta",
+        "region": "Jakarta",
+        "country": "ID",
+        "location": "-6.2146,106.8451"
+    },
+    "218.1.200.229:57114": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "country": "CN",
+        "location": "31.2222,121.4581"
+    },
+    "159.89.163.128:7497": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Doddaballapura",
+        "region": "Karnataka",
+        "country": "IN",
+        "location": "13.2257,77.5750"
+    },
+    "210.245.51.23:4145": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Hanoi",
+        "region": "Hanoi",
+        "country": "VN",
+        "location": "21.0245,105.8412"
+    },
+    "180.211.248.222:8080": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Dhaka",
+        "region": "Dhaka",
+        "country": "BD",
+        "location": "23.7104,90.4074"
+    },
+    "65.21.103.82:1000": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Tuusula",
+        "region": "Uusimaa",
+        "country": "FI",
+        "location": "60.3540,24.9794"
+    },
+    "51.222.13.193:10084": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Montr\u00e9al",
+        "region": "Quebec",
+        "country": "CA",
+        "location": "45.5040,-73.5747"
+    },
+    "113.108.247.146:20086": {
+        "protocol": [
+            "socks4"
+        ],
+        "city": "Shenzhen",
+        "region": "Guangdong",
+        "country": "CN",
+        "location": "22.5455,114.0683"
+    },
+    "212.80.213.101:8080": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Mueang Nonthaburi",
+        "region": "Nonthaburi",
+        "country": "TH",
+        "location": "13.8607,100.5148"
+    },
+    "85.14.243.31:3128": {
+        "protocol": [
+            "http"
+        ],
+        "city": "D\u00fcsseldorf",
+        "region": "North Rhine-Westphalia",
+        "country": "DE",
+        "location": "51.2217,6.7762"
+    },
+    "67.200.146.75:3128": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Houston",
+        "region": "Texas",
+        "country": "US",
+        "location": "29.8052,-95.5607"
+    },
+    "182.253.109.111:8080": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Pamanukan",
+        "region": "West Java",
+        "country": "ID",
+        "location": "-6.2842,107.8106"
+    },
+    "114.116.2.116:8001": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Beijing",
+        "region": "Beijing",
+        "country": "CN",
+        "location": "39.9075,116.3972"
+    },
+    "163.172.215.211:3128": {
+        "protocol": [
+            "http"
+        ],
+        "city": "Amsterdam",
+        "region": "North Holland",
+        "country": "NL",
+        "location": "52.3740,4.8897"
+    },
+    "37.18.73.60:5566": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Reykjav\u00edk",
+        "region": "Capital Region",
+        "country": "IS",
+        "location": "64.1355,-21.8954"
+    },
+    "37.18.73.94:5566": {
+        "protocol": [
+            "socks4",
+            "socks5"
+        ],
+        "city": "Rehren",
+        "region": "Lower Saxony",
+        "country": "DE",
+        "location": "52.2333,9.2333"
+    },
+    "159.89.228.253:38172": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "North Bergen",
+        "region": "New Jersey",
+        "country": "US",
+        "location": "40.8043,-74.0121"
+    },
+    "67.210.146.50:11080": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Arlington",
+        "region": "Texas",
+        "country": "US",
+        "location": "32.7357,-97.1081"
+    },
+    "146.19.191.116:1080": {
+        "protocol": [
+            "socks5"
+        ],
+        "city": "Heilbronn",
+        "region": "Baden-Wurttemberg",
+        "country": "DE",
+        "location": "49.1286,9.2214"
+    }
+}
